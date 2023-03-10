@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+
+<div style="display: inline-block; width: 20%;">
+    <h1>User</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+        </tr>
+        <tr>
+            <td th:text="${currentUser.id}"></td>
+            <td th:text="${currentUser.username}"></td>
+            <td th:text="${currentUser.password}"></td>
+        </tr>
+    </table>
+</div>
+<p><a th:href="@{/logout}">Logout</a></p>
+</body>
+</html>
