@@ -20,7 +20,6 @@ import javax.servlet.http.HttpServletRequest;
 public class UserController {
 
     private UserServiceImpl userService;
-
     private RoleRepository roleRepository;
 
     @Autowired
