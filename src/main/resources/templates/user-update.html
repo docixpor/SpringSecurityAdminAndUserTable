@@ -23,6 +23,16 @@
 
         <br>
 
+        <label for="roles"> Roles:</label>
+
+        <br>
+
+        <select multiple name="roles" id="roles">
+            <option value="1">User</option>
+            <option value="2">Admin</option>
+        </select>
+
+        <input type="hidden" name="_method" value="PATCH"/>
         <input type="submit" value="Update User"/>
         <p><a th:href="@{/logout}">Logout</a></p>
     </div>

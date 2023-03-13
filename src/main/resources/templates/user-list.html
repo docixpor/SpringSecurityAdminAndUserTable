@@ -20,13 +20,23 @@
             <td th:text="${user.id}"></td>
             <td th:text="${user.username}"></td>
             <td th:text="${user.password}"></td>
-            <td><a th:href="@{/admin/user-update/{id}(id=${user.id})}">Edit</a></td>
-            <td><a th:href="@{/admin/user-delete/{id}(id=${user.id})}">Delete</a></td>
+            <td>
+            <form method="post" th:action="@{/admin/user-update/{id}(id=${user.id})}">
+                <input type="hidden" name="_method" value="PATCH" />
+                <button type="submit">Update</button>
+            </form>
+            </td>
+            <td>
+                <form method="post" th:action="@{/admin/user-delete/{id}(id=${user.id})}">
+                    <input type="hidden" name="_method" value="DELETE" />
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
         </tr>
     </table>
 </div>
 <p><a th:href="@{/admin/user-create}">Create user</a></p>
-<p><a th:href="@{/info}">Info about yourself</a></p>
+<p><a th:href="@{/user}">Info about yourself</a></p>
 <p><a th:href="@{/logout}">Logout</a></p>
 </body>
 </html>
