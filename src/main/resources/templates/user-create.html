@@ -23,8 +23,7 @@
         <br>
 
         <select multiple name="roles" id="roles">
-            <option value="1">User</option>
-            <option value="2">Admin</option>
+            <option th:each="role : ${roles}" th:value="${role.id}" th:text="${role.name}"></option>
         </select>
 
         <br>
