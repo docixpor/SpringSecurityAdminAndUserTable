@@ -21,8 +21,7 @@
             <td th:text="${user.username}"></td>
             <td th:text="${user.password}"></td>
             <td>
-            <form method="post" th:action="@{/admin/user-update/{id}(id=${user.id})}">
-                <input type="hidden" name="_method" value="PATCH" />
+            <form method="get" th:action="@{/admin/user-update/{id}(id=${user.id})}">
                 <button type="submit">Update</button>
             </form>
             </td>

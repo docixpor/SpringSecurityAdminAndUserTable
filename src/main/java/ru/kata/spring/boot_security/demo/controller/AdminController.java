@@ -50,7 +50,7 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-    @PatchMapping("/user-update/{id}")
+    @GetMapping("/user-update/{id}")
     public String updateUserForm(@PathVariable("id") Long id, Model model) {
         model.addAttribute("roles", roleService.getAllRoles());
         model.addAttribute("user", userService.findById(id));
